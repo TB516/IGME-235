@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Jupiter";
+    src: url(Fonts/Fontspring-DEMO-jupiter_pro_bold.otf);
+}
+@font-face {
+    font-family: "Myriad Pro Light";
+    src: url(Fonts/Myriad-Pro-Light.otf);
+}
+
+a:active{color:rgb(199, 182, 87);}
+a:visited{color: #736bcf}
+
+body {background-color: #191919; color:#ada9da; font-family: "Myriad Pro Light";}
+
+h1{text-align: center; font-family: "Jupiter"; font-size: 3em; color: rgb(199, 182, 87);}
+
+#description{text-align: center; font-size: 2em; font-weight: bold; margin-top: 50px;}
+
+.image {object-fit: contain; width: 100%;}
+
+#details {font-size: 2em;}
+#detailsList {font-size: 1.5em;}
+
+#devider {color: rgb(199, 182, 87)}
+
+#quoteBlock {font-size: 2em;}
+#gameQuote {font-size: 1.5em;}
+
+footer {font-size: 1.5em;}
