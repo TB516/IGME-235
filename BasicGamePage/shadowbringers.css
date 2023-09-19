@@ -9,8 +9,8 @@
     src: url(Fonts/Myriad-Pro-Light.otf);
 }
 
-a:active{color:rgb(199, 182, 87);}
 a:visited{color: #736bcf}
+a:active{color:rgb(199, 182, 87);}
 
 body {background-color: #191919; color:#ada9da; font-family: "Myriad Pro Light";}
 
