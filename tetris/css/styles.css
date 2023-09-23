@@ -1,0 +1,6 @@
+h2 {border-bottom: solid red .1em; clear: both;}
+
+main figure {float: right; width: 40%; margin-left: 5%}
+main figure img {width: 100%}
+
+.tet {float: left; width: 50%; border: solid;}

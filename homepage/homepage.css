@@ -1,0 +1,22 @@
+a:link {color: lightpink;}
+a:visited {color: lightgrey}
+a:focus {color: red}
+a:hover {color: red}
+a:active {color: darkred}
+
+body {background-color: #e6e6e6; color: #404040; margin: 0;}
+
+h1 {display: flex; justify-content: center; align-items: center; font-family: myriad-pro, sans-serif; font-size: 3rem; margin: 0; height: 5rem; background-color: #404040; color: lightgray; }
+
+header hr {color: black; border: solid .2rem; margin-top: 0;}
+
+main div#description {display: flex; margin: 0 10px; color: #404040}
+main div#description img {object-fit: contain; max-width: 12rem; margin: 0px 10px 0px 0px;}
+main div#description p {font-family: myriad-pro, sans-serif; font-size: 1.5rem;}
+
+hr {color: black; border: solid .1rem}
+
+main div#projects p {text-align: center; font-family: myriad-pro, sans-serif; font-size: 2em; font-weight: bold; margin: 0;}
+main div#projects ul {display: flex; justify-content: center; align-items: center; list-style-type: none; flex-wrap: wrap;}
+main div#projects ul li a {display: block; text-align: center; background-color: #404040; font-family: myriad-pro, sans-serif; border-radius: .5em; padding: 20px; margin: 20px;}
+main div#projects ul li img {object-fit: contain; max-width: 200px; height: 200px;}
