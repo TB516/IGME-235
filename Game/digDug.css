@@ -1,0 +1,44 @@
+a:link {color: pink;}
+a:visited {color: lightpink}
+a:focus {color: red}
+a:hover {color: red}
+a:active {color: darkred}
+
+body {
+    background-color: #0b2545;
+}
+
+main, header, footer{
+    color: #0b2545;
+    background-color: #8DA9C4;
+    font-family: Arial, sans-serif;
+    border: black solid 1px;
+    margin: 0 auto;
+    width: 80vw;
+    padding: 1.5rem;
+}
+
+h1 {
+    color: red;
+    border-bottom: 1px solid #0b2545;
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    color: #EEF4ED;
+    background-color: #6A89A6;
+    margin-left: 25px;
+    padding-left: 2%;
+    font-family: 'Oswald', sans-serif;
+}
+
+blockquote {
+    background-color: #134074;
+    color: #8DA9C4;
+    padding: 1rem;
+}
+
+img.side {
+    float: right;
+    margin: 0 12px;
+}

@@ -1,6 +1,10 @@
-h2 {border-bottom: solid red .1em; clear: both;}
+header main footer {width: 90vw; margin: auto;}
 
-main figure {float: right; width: 40%; margin-left: 5%}
-main figure img {width: 100%}
+main figure {max-width: 650px; margin: auto;}
+main figure img {width: 100%;}
 
-.tet {float: left; width: 50%; border: solid;}
+#tetlist {display: flex; flex-flow: row wrap;}
+.tet {flex: 1 1 450px; border: 1px solid black; text-align: center;}
+.tet div img {width: 60%;}
+.tet div.aliases {text-align: left; margin: 1em;}
+.tet span {display: block; margin: 10px; font-size: 2rem; font-weight: bold;}
