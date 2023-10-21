@@ -1,28 +1,32 @@
 a:link {color: rgb(199, 182, 87);}
 a:visited {color:#F76902}
-a:focus {}
+/* a:focus {}
 a:hover {}
-a:active {}
+a:active {} */
 
 body {
     display: grid;
-    grid-template-areas: "header" "mainContent";
 
-    margin: 20px;
+    grid-template-areas: "nav header" "nav mainContent";
+    grid-template-columns: 8% auto;
 
+    height: 100vh;
+    
     background-color: darkgray;
 }
 
 header {
     grid-area: header;
 
+    position: relative;
+    left: -5em;
+
+    z-index: 1;
+
     color: white;
 }
 
 h1 span#name {
-    position: relative;
-    left: -1vw;
-
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 5vw;
 
@@ -42,47 +46,63 @@ h1 span#title {
     background-color: rgb(48, 48, 48);    
 }
 
+nav {
+    grid-area: nav;
+
+    position: fixed;
+    
+    height: 101%;
+
+    background-color: rgb(48, 48, 48);
+
+}
+
+.navElement{
+    display: block;
+    
+    position: relative;
+    top: 18%;
+
+    text-align: center;
+
+    margin: 20px 10px;
+    padding: 10px 5px;
+
+    border-radius: .5em;
+
+    font-family: "Candara";
+    font-size: 1.2em;
+
+    background-color: rgb(80, 80, 80);
+}
+
 main {
     grid-area: mainContent;
     
     display: grid;
-    grid-template-columns: 100px auto;
-    grid-template-areas: "nav about" "nav projects";
+    grid-template-areas: "about" "projects";
+
+    margin: 0 5%;
 
     font-family: "Candara";
-    font-size: 1.2em;
+    font-size: 1.25em;
 }
 
-main nav {
-    grid-area: nav;
-    
-    display: flex;
-    justify-content: center;
-
-    margin: 0px 5px;
-
-    background-color: rgb(48, 48, 48);
-}
-
-main nav .navElement{
-    display: block;
-}
-
-main #content #about {
+main #about {
     grid-area: about;
 
     display: flex;
     align-items: center;
 
-    margin: 0px 5px;
+    margin: 0px 5%;
     padding: 5px;
 }
 
-main #content #about img {
+main #about img {
     object-fit: contain; 
     max-width: 12rem; 
     
     margin: 0px 10px 0px 0px;
 
-    border: black solid 1px;
+    border: black solid 5px;
 }
