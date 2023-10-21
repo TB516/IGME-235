@@ -1,0 +1,88 @@
+a:link {color: rgb(199, 182, 87);}
+a:visited {color:#F76902}
+a:focus {}
+a:hover {}
+a:active {}
+
+body {
+    display: grid;
+    grid-template-areas: "header" "mainContent";
+
+    margin: 20px;
+
+    background-color: darkgray;
+}
+
+header {
+    grid-area: header;
+
+    color: white;
+}
+
+h1 span#name {
+    position: relative;
+    left: -1vw;
+
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 5vw;
+
+    background-color: #F76902;
+}
+
+h1 span#title {
+    position: relative;
+    top: 3.85vw;
+    left: -10vw;
+
+    padding: 0px 3px;
+
+    font-family: "Candara Light";
+    font-size: 3vw;
+
+    background-color: rgb(48, 48, 48);    
+}
+
+main {
+    grid-area: mainContent;
+    
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-areas: "nav about" "nav projects";
+
+    font-family: "Candara";
+    font-size: 1.2em;
+}
+
+main nav {
+    grid-area: nav;
+    
+    display: flex;
+    justify-content: center;
+
+    margin: 0px 5px;
+
+    background-color: rgb(48, 48, 48);
+}
+
+main nav .navElement{
+    display: block;
+}
+
+main #content #about {
+    grid-area: about;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+main #content #about img {
+    object-fit: contain; 
+    max-width: 12rem; 
+    
+    margin: 0px 10px 0px 0px;
+
+    border: black solid 1px;
+}

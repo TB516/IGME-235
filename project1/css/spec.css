@@ -1,0 +1,102 @@
+/*Orange: #F76902, Light Grey: #D0D3D4, */
+
+body {
+    margin:20px;
+    background-color: rgb(230, 230, 230);
+}
+
+h1 {
+    position: absolute;
+    top: -.1rem;
+    left: .5rem;
+    width: fit-content;
+    background-color: #F76902;
+    color: white;
+}
+h1 span {
+    position: relative;
+    top: 1.15rem;
+    left: 1.2rem;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 2.5em;
+}
+
+h2 {
+    position: absolute;
+    width: fit-content;
+    padding: 3px;
+    top: 3.82em;
+    left: 6.5em;
+    font-family: "Candara Light";
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+h3 img {
+    object-fit: contain;
+    z-index: -1;
+    width: 100%;
+    height: 80%;
+}
+
+h4 {
+    position: relative;
+    margin-left: 2rem;
+    top: -11.5rem;
+    height: fit-content;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 4.5em;
+    color: white;
+}
+h4 .orangeText {
+    color:#F76902;
+}
+
+main {
+    position: relative;
+    top: -15rem;
+    left: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: "mainContent    topBox"
+                         "mainContent bottomBox";
+    grid-template-columns: 70% 30%;
+}
+
+#bodyText {
+    grid-area: mainContent;
+    font-size: 1.2rem;
+    column-count: 3;
+}
+#bodyText::first-letter {
+    initial-letter: 3 3;
+}
+
+.sideBox {
+    margin: 0 0 0 3rem;
+    padding: 1rem;
+    display: block;
+    border-radius: 0 0 0 4rem;
+}
+
+.sideBox#topBox {
+    grid-area: topBox;
+    background-color: #F76902;
+}
+
+.sideBox#bottomBox{
+    grid-area: bottomBox;
+    background-color: darkgray;
+}
+
+footer{
+    position: relative;
+    top:-14rem;
+    margin: 0;
+}
+
+footer img {
+    object-fit: contain;
+    width: 100%;
+    height: 60%;
+}
