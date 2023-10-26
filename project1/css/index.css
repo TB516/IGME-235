@@ -1,108 +1,477 @@
-a:link {color: rgb(199, 182, 87);}
-a:visited {color:#F76902}
-/* a:focus {}
-a:hover {}
-a:active {} */
+a:link {color:#c02773}
+a:visited {color: #a9501d}
+a:focus, a:hover {color:#e54294} 
+a:active {color: #ff0033}
 
-body {
-    display: grid;
-
-    grid-template-areas: "nav header" "nav mainContent";
-    grid-template-columns: 8% auto;
-
-    height: 100vh;
+@media screen and (min-width: 769px) {
+    body {
+        display: grid;
     
-    background-color: darkgray;
-}
-
-header {
-    grid-area: header;
-
-    position: relative;
-    left: -5em;
-
-    z-index: 1;
-
-    color: white;
-}
-
-h1 span#name {
-    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 5vw;
-
-    background-color: #F76902;
-}
-
-h1 span#title {
-    position: relative;
-    top: 3.85vw;
-    left: -10vw;
-
-    padding: 0px 3px;
-
-    font-family: "Candara Light";
-    font-size: 3vw;
-
-    background-color: rgb(48, 48, 48);    
-}
-
-nav {
-    grid-area: nav;
-
-    position: fixed;
+        grid-template-areas: "nav header" "nav mainContent";
+        grid-template-columns: 10% auto;
+        grid-template-rows: min-content;
     
-    height: 101%;
+        height: 100vh;
 
-    background-color: rgb(48, 48, 48);
-
-}
-
-.navElement{
-    display: block;
+        background-color: darkgray;
+    }
     
-    position: relative;
-    top: 18%;
-
-    text-align: center;
-
-    margin: 20px 10px;
-    padding: 10px 5px;
-
-    border-radius: .5em;
-
-    font-family: "Candara";
-    font-size: 1.2em;
-
-    background-color: rgb(80, 80, 80);
-}
-
-main {
-    grid-area: mainContent;
+    nav {
+        grid-area: nav;
     
-    display: grid;
-    grid-template-areas: "about" "projects";
-
-    margin: 0 5%;
-
-    font-family: "Candara";
-    font-size: 1.25em;
-}
-
-main #about {
-    grid-area: about;
-
-    display: flex;
-    align-items: center;
-
-    margin: 0px 5%;
-    padding: 5px;
-}
-
-main #about img {
-    object-fit: contain; 
-    max-width: 12rem; 
+        position: fixed;
+        
+        width: 10%;
+        height: 101%;
     
-    margin: 0px 10px 0px 0px;
+        background-color: rgb(48, 48, 48);
+    }
+    
+    .navElement{
+        display: block;
+        
+        position: relative;
+        top: 18%;
+    
+        text-align: center;
+    
+        margin: 20px 10px;
+        padding: 10px 5px;
+    
+        border-radius: .5em;
+    
+        font-family: "Candara";
+        font-size: 1.5vw;
+    
+        background-color: rgb(80, 80, 80);
+    }
+    
+    header#pageHeader {
+        grid-area: header;
+    
+        position: relative;
+        left: -5vw;
+        
+        z-index: 1;
+    
+        color: white;
+    }
+    
+    h1 span#name {
+        font-family: "Helvetica", "Roboto", "Arial", sans-serif;
+        font-size: 5vw;
+    
+        background-color: #F76902;
+    }
+    
+    h1 span#title {
+        position: relative;
+        top: 3.85vw;
+        left: -10vw;
+    
+        padding: 0px 3px;
+    
+        font-family: "Candara Light";
+        font-size: 3vw;
+    
+        background-color: rgb(48, 48, 48);    
+    }
 
-    border: black solid 5px;
+    main {
+        grid-area: mainContent;
+        
+        display: grid;
+        grid-template-areas: "about" "projects";
+    
+        font-family: "Candara";
+        font-size: 2.5vw;
+        font-weight: 550;
+    }
+    
+    main #about {
+        grid-area: about;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        height: min-content;
+    
+        margin: 1vw 5%;
+        padding: 5px;
+    }
+    
+    main #about img {
+        object-fit: contain; 
+        max-width: 28vw; 
+        
+        margin: 0px 10px 0px 0px;
+    
+        border: black solid .5vw;
+    }
+    
+    /* main #about #contact{
+        display: flex;
+        flex-direction: column;
+    
+        margin: 1vw;
+    }
+    
+    main #about #contact span{
+        text-align: center;
+    
+        font-family: Helvetica, sans-serif;
+        font-size: 150%;
+        font-weight: 300;
+    }
+    
+    main #about #contact ul{
+        display: inline-flex;
+        flex-direction: row;
+    
+        justify-content: center;
+        align-content: center;
+    
+        list-style: none;
+    }
+    
+    main #about #contact li{
+        display: block;
+        margin: 20px;
+    } */
+    
+    main #projects {
+        grid-area: projects;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    
+        margin: 1vw 0;
+    }
+    
+    main #projects header{
+        display: flex;
+    
+        width: 100%;
+        height: 4%;
+    
+        justify-content: center;
+        align-items: center;
+    
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 300%;
+    
+        color: white;
+        background-color: #F76902;
+    
+        border-top: rgb(48, 48, 48) solid .5vw;
+        border-bottom: rgb(48, 48, 48) solid .5vw;
+    }
+    
+    main #projects .project{
+        display: grid;
+        grid-template-areas: "title title" "images description";
+        grid-template-columns:45% 55%;
+        grid-template-rows: auto 1fr;
+    
+        width: 100%;
+        min-height: 40vw;
+    
+        margin: 60px 0;
+    }
+    
+    main #projects .project .pTitle{
+        grid-area: title;
+    
+        width: 60%;
+    
+        margin: 5px auto 20px;
+    
+        text-align: center;
+    
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 200%;
+    }
+    
+    main #projects .project .pContent{
+        object-fit: contain; 
+    
+        width: 95%;
+        height: 90%;
+    
+        margin: auto;
+    }
+    
+    main #projects .project .pDescription{
+        border-radius: 10% 0 0 10%;
+        
+        height: 100%;
+    
+        background-color: rgb(48, 48, 48);
+    }
+    
+    main #projects .project .pDescription .text{
+        margin: 10%;
+    
+        font-size: 2vw;
+    
+        color: white;
+    }
+    
+    .tag {
+        display: inline-block;
+    
+        padding: 2px 5px;
+    
+        font-size: 120%;
+        font-weight: 550;
+    
+        list-style: none;
+    
+        border-radius: 10%;
+    
+        color:black;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: grid;
+    
+        grid-template-areas: "nav" "header" "mainContent";
+        grid-template-rows: 10vw min-content min-content;
+    
+        height: 100vh;
+        
+        background-color: darkgray;
+    }
+
+    nav {
+        grid-area: nav;
+        
+        display: flex;
+
+        position: fixed;
+
+        width: 100%;
+        height: 10vw;
+
+        justify-content: center;
+        align-content: center;
+    
+        z-index: 1;
+    
+        background-color: rgb(48, 48, 48);
+    }
+    
+    .navElement{
+        display: block;
+    
+        text-align: center;
+    
+        margin:auto 20px;
+        padding: 5px 5px;
+    
+        border-radius: .5em;
+    
+        font-family: "Candara";
+        font-size: 4vw;
+    
+        background-color: rgb(80, 80, 80);
+    }
+
+    header#pageHeader {
+        grid-area: header;
+        
+        position: relative;
+        top: 1.5vw;
+
+        color: white;
+    }
+    
+    h1 #name {
+        position: relative;
+        left: 12vw;
+
+        font-family: "Helvetica", "Roboto", "Arial", sans-serif;
+        font-size: 10vw;
+    
+        background-color: #F76902;
+    }
+    
+    h1 #title { 
+        display:block;
+        
+        position: relative;
+        top: -.25vw;
+        left: 22vw;
+
+        width: fit-content;
+
+        padding: 0px 3px;
+    
+        font-family: "Candara Light";
+        font-size: 6vw;
+    
+        background-color: rgb(48, 48, 48);    
+    }
+
+    main {
+        grid-area: mainContent;
+        
+        display: grid;
+        grid-template-areas: "about" "projects";
+    
+        font-family: "Candara";
+        font-size: 5vw;
+        font-weight: 550;
+    }
+    
+    main #about {
+        grid-area: about;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        height: min-content;
+    
+        margin: 1vw 5%;
+        padding: 5px;
+    }
+    
+    main #about img {
+        object-fit: contain; 
+        max-width: 56vw; 
+        
+        margin: 0px 10px 0px 0px;
+    
+        border: black solid .5vw;
+    }
+    
+    main #projects {
+        grid-area: projects;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    
+        margin: auto 0;
+    }
+    
+    main #projects header{
+        display: flex;
+    
+        width: 100%;
+        height: 8%;
+    
+        justify-content: center;
+        align-items: center;
+    
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 300%;
+    
+        color: white;
+        background-color: #F76902;
+    
+        border-top: rgb(48, 48, 48) solid .5vw;
+        border-bottom: rgb(48, 48, 48) solid .5vw;
+    }
+    
+    main #projects .project{
+        display: grid;
+        grid-template-areas: "title" "images" "description";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    
+        width: 100%;
+        min-height: 120vw;
+    
+        margin: auto;
+    }
+    
+    main #projects .project .pTitle{
+        grid-area: title;
+    
+        width: 60%;
+    
+        margin: 20px auto 20px;
+    
+        text-align: center;
+    
+        font-family: Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 200%;
+    }
+    
+    main #projects .project .pContent{
+        object-fit: contain; 
+    
+        width: 95%;
+        height: 90%;
+    
+        margin: auto;
+    }
+    
+    main #projects .project .pDescription{        
+        height: 100%;
+        min-height: 40vw;
+    
+        background-color: rgb(48, 48, 48);
+    }
+    
+    main #projects .project .pDescription .text{
+        margin: 5%;
+    
+        font-size: 6vw;
+    
+        color: white;
+    }
+    
+    .tag {
+        display: inline-block;
+    
+        padding: 2px 5px;
+    
+        font-size: 120%;
+        font-weight: 550;
+    
+        list-style: none;
+    
+        border-radius: 10%;
+
+        font-size: 5vw;
+    
+        color:black;
+    }
+}
+
+.C\# {
+    background-color: #863d96;
+}
+.Monogame {
+    background-color: #29ba0c;
+}
+.Unity {
+    background-color: #972baf;
+}
+.HTML {
+    background-color: #e34c26;
+}
+.CSS {
+    background-color: #2965f1;
+}
+.JS {
+    background-color: #F0DB4F;
+}
+.React {
+    background-color: #61DBFB;
 }
