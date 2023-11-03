@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>DOM-3</title>
+        <style>
+            body{border:1px solid gray;}
+            p b{transform: rotate(20deg)}
+        </style>
+    </head>
+
+    <body>
+        <h1>My Page</h1>
+        <h2>Info</h2>
+        <h2>Pictures</h2>
+        <h2>More Info</h2>
+        <p>Blah <b>Blah</b> Blah</p>
+        <p>Blah <b>Blah</b> Blah</p>
+        <p id="lastParagraph">Blah <b>Blah</b> Blah</p>
+        <footer>Copyright &copy; <b>20XX</b></footer>
+
+        <script>
+            "use strict"; 
+        
+            document.querySelector("h1").innerHTML = "My UFO Page";
+
+            let h2s = document.querySelectorAll("h2");
+
+            h2s[0].innerHTML = "My UFO Info";   
+            h2s[1].innerHTML = "My UFO Pictures";
+            h2s[2].innerHTML = "";
+
+            document.body.style.fontFamily = "sans-serif";
+            document.body.style.color = "red";
+
+            let paragraphOne = document.querySelector("p");
+
+            let ufoLink = document.createElement('a');
+            ufoLink.innerHTML = "here:";
+            ufoLink.href = "http://www.nuforc.org";
+
+            paragraphOne.innerHTML = 'Report your UFO sightings ';
+            paragraphOne.append(ufoLink);
+
+            paragraphOne.style.color = "green";
+            paragraphOne.style.fontWeight = "bold";
+            paragraphOne.style.fontSize = "2em";
+            paragraphOne.style.textTransform = "uppercase";
+            paragraphOne.style.textShadow = "3px 2px #A44";
+
+            document.querySelectorAll("p")[1].innerHTML = "";
+
+            document.querySelectorAll("p")[2].innerHTML = "<img src = 'https://www.livemint.com/lm-img/img/2023/06/25/600x338/g7b77514d55fce8ffc690b4d4bcc97608607c8e45e9e9edfff_1687710214928_1687710215209.jpg' alt = ''>";
+
+            document.querySelector("footer").innerHTML = "Copyright ©" + new Date().getFullYear() + " Thomas Berrios";
+        </script>
+    </body>
+</html>

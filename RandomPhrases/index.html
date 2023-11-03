@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Phrases</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+            <header><div id="title">Emet-Selch Quote Generator</div></header>
+
+            <main>
+                <div id="quoteElement">
+                    <button id="generateButton">Generate Quote</button>
+                    <div id="quote">QUOTE</div>
+                </div>
+                <div id="copyright">Copyright <span id="year"></span> Thomas Berrios</div>
+            </main>
+        <script>
+            "use strict";
+
+            const quotes = ["Remember... Remember us... Remember... that we once lived...", "Behold, a sorcerer of eld! Tremble before my glory!", "The victor shall write the tale, and the vanquished become its villain!", "You've committed the cardinal sin of boring me. And so I retire to the shade.", "Really. I have no need of deception─and even if I did, I assure you: you would find it quite indistinguishable from the truth.", "No lands must remain beyond our grasp. Go forth. Conquer. Rule."]
+            const quote = document.getElementById("quote");
+
+            function DisplayQuote(){
+                quote.innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+            }
+
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+            DisplayQuote();
+
+            document.getElementById("generateButton").addEventListener("click", DisplayQuote)
+        </script>
+    </body>
+</html>

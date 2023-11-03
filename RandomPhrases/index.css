@@ -1,0 +1,84 @@
+button:hover {color: rgb(159, 53, 173)}
+button:active {color: rgb(225, 0, 255);}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url(emet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin: 0;
+    
+    background-color: rgb(101, 55, 107);
+}
+
+header {width: 100%;}
+
+#title {    
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 540;
+    color: white;
+    background-color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #quoteElement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 375px;
+}
+
+main #quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 99vw;
+    height: 28vh;
+
+    border-radius: .5em;
+    text-align: center;
+
+    padding: 5px;
+
+    font-size: 4vw;
+
+    color: lightgray;
+    background-color: black;
+}
+
+main button {   
+    display: inline-block;
+    
+    padding: 15px 32px;
+
+    font-size: 3vw;
+    text-align: center;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 12px;
+
+    color: rgb(101, 55, 107);
+    background-color: black;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 0;
+}

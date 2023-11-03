@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Web Apps-5</title>
+        <style>
+            body{
+                font-family:sans-serif;
+            }
+            #colorform{
+                background-color:#dfecdf;
+                color: #111;
+                padding:1em;width:400px;
+            }
+            #colorform p#info{
+                background-color:white;
+                color: black;
+                width:300px;
+                height:100px;
+                padding:.5em;
+            }
+            
+            #colorform legend{ 
+                font-weight:bold;
+                font-size:1.2em;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="colorform">
+            <legend>Choose your favorite color!</legend>
+            <p><input type="checkbox" name="colorGroup" id="colorGroupRed" value="red" /> Red</p>
+            <p><input type="checkbox" name="colorGroup" id="colorGroupGreen" value="green" /> Green</p>
+            <p><input type="checkbox" name="colorGroup" id="colorGroupBlue" value="blue" /> Blue</p>
+            <p><button id="colorButton" type="button">Submit</button></p>
+            <p id="info"></p>
+        </div>
+
+        <script>
+            let paragraph = document.getElementById("info");
+            
+            function ChangeParagraph(){
+                paragraph.innerHTML = "You have selected ";
+                
+                let text = "";
+                let boxes = document.querySelectorAll("input[type=checkbox]");
+
+                for (let i = 0; i < boxes.length; i++){
+                    if (boxes[i].checked && i > 0){
+                        text += " and " + boxes[i].value;
+                    }
+                    else if (boxes[i].checked){
+                        text += boxes[i].value;
+                    }
+                }
+                
+                if (text == ""){
+                    text = "nothing";              
+                }
+
+                text += "!";
+                paragraph.innerHTML += text;
+            }
+
+            function Submit(){
+                paragraph.innerHTML = "Your FINAL CHOICE is  ";
+                
+                let text = "";
+                let boxes = document.querySelectorAll("input[type=checkbox]");
+
+                for (let i = 0; i < boxes.length; i++){
+                    if (boxes[i].checked && i > 0){
+                        text += " and " + boxes[i].value;
+                    }
+                    else if (boxes[i].checked){
+                        text += boxes[i].value;
+                    }
+
+                    boxes[i].removeEventListener("change", ChangeParagraph);
+                }
+                
+                if (text == ""){
+                    text = "nothing";              
+                }
+
+                text += "!";
+                paragraph.innerHTML += text;
+
+                document.querySelector("button[id=colorButton]").removeEventListener("click", Submit);
+            }
+
+            document.querySelectorAll("input[type=checkbox]").forEach((element) => { element.addEventListener("change", ChangeParagraph); });
+            document.querySelector("button[id=colorButton]").addEventListener("click", Submit);
+
+        </script>
+    </body>
+</html>
