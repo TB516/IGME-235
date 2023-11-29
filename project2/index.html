@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wows Ship Database</title>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/shipFinder.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>World Of Warships Ship Database</h1>
+        </header>
+
+        <nav id="shipNav">
+            <div>
+                <label for="shipType">Ship Type</label>
+                <select id="shipType" class="input">
+                    <option value="" selected disabled hidden>Ship Type</option>
+                </select>
+            </div>
+               
+            <div>
+                <label for="nation">Ship Nation</label>
+                <select id="nation" class="input">
+                    <option value="" selected disabled hidden>Ship Nation</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="tier">Ship Tier</label>
+                <select id="tier" class="input">
+                    <option value="10" selected disabled hidden>Ship Tier</option>
+                </select>
+            </div>
+            
+            <div><button id="searchButton">Search</button></div>
+        </nav>
+
+        <main>
+            <div id="content">
+
+            </div>
+        </main>
+    </body>
+</html>

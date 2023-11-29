@@ -1,0 +1,83 @@
+body {
+    margin:0;
+    color:white;
+    background-color: rgb(168, 168, 168);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    height: 20%;
+
+    background-color: #162b3f;
+}
+
+nav#shipNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: fixed;
+    top: 20%;
+
+    width: 248px;
+    height: 80%;
+    
+    background-color: #162b3f;
+}
+nav#shipNav div{
+    margin: 10px 0;
+
+    text-align: center;
+}
+nav#shipNav .input{
+    display: block;
+
+    width: 90%;
+    height: 50%;
+
+    margin: 10px auto;
+
+    text-align: center;
+    appearance: none;
+    box-sizing: border-box;
+
+    border: none;
+}
+nav#shipNav button{
+    width: 90%;
+    height: 75%;
+
+    margin: 10px auto;
+}
+
+main{
+    position: absolute;
+    top: 20%;
+    left: 248px;
+
+    width: calc(100% - 248px);
+    z-index: -1;
+}
+
+main #content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+    color: black;
+}
+
+.ship {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
