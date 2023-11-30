@@ -17,25 +17,34 @@
             <div>
                 <label for="shipType">Ship Type</label>
                 <select id="shipType" class="input">
-                    <option value="" selected disabled hidden>Ship Type</option>
+                    <option value=" " selected>None</option>
                 </select>
             </div>
                
             <div>
                 <label for="nation">Ship Nation</label>
                 <select id="nation" class="input">
-                    <option value="" selected disabled hidden>Ship Nation</option>
+                    <option value=" " selected>None</option>
                 </select>
             </div>
 
             <div>
                 <label for="tier">Ship Tier</label>
                 <select id="tier" class="input">
-                    <option value="10" selected disabled hidden>Ship Tier</option>
+                    <option value="0" selected>None</option>
                 </select>
             </div>
             
             <div><button id="searchButton">Search</button></div>
+
+            <div id="pageSelectContainer">
+                <label for="pageNum">Page</label>
+                <div id="pageSelect">
+                    <button id="prev" class="searchPageNav" disabled>Previous</button>
+                    <button id="pageNum" class="searchPageNav" disabled>1</button>
+                    <button id="next" class="searchPageNav">Next</button>
+                </div>
+            </div>            
         </nav>
 
         <main>
