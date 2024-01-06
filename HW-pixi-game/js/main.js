@@ -359,7 +359,7 @@ function end(){
     circles.forEach(c=>gameScene.removeChild(c));
     circles = [];
 
-    bullets.forEach(b=>bullets.removeChild(b));
+    bullets.forEach(b=>gameScene.removeChild(b));
     circles = [];
 
     explosions.forEach(e=>gameScene.removeChild(e));

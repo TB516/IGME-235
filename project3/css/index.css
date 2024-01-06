@@ -1,0 +1,29 @@
+body{
+    display: grid;
+    grid-template-areas: "instructions game links";
+    grid-template-columns: 1fr 972px 1fr;
+
+    background-color: darkgray;
+}
+
+canvas{
+    grid-area: game;
+}
+
+main {
+    grid-area: instructions;
+
+    font-size: 1.5em;
+}
+main header{
+    text-align: center;
+}
+main #description{
+    margin: 20px;
+}
+
+nav {
+    grid-area: links;
+
+    margin: auto;
+}

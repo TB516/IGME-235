@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 Proposal</title>
+	<style type="text/css">
+		body{
+			margin-left:5%;
+			margin-right:5%;
+			background-color:#00008B;
+			font-family: verdana;
+		}
+		
+		#content{
+			background-color:white;
+			padding: 0 1em .5em 1em;
+		}
+		h1,h2,h3{
+			font-family: 'Allerta Stencil', sans-serif;
+			margin-bottom:0;
+			padding-bottom:0;
+		}
+		
+		h3{
+			color: #555;
+		}
+		
+		h2 + p, h3 + p{
+			margin-top:0.25em;
+		}
+		
+		li{
+			margin-bottom: 1em;
+		}
+		
+		section{
+			border-bottom: solid 1px gray;
+		}
+	</style>
+</head>
+<body>
+    <div id="content">
+		<h1><em>Tetris Blast</em></h1>
+		
+		<section>
+			<h2>I. High Concept</h2>
+			<p>While playing classic Tetris, you are given generic blocks that you must forge into the pieces you need.</p>
+		</section>
+		
+		<section>
+			<h2>II. Genre</h2>
+			<p>Arcade, Puzzle, Shooter</p>
+		</section>
+		
+		<section>
+			<h2>III. Platform</h2>
+			<p>Desktop Only</p>
+		</section>
+		
+		<section>
+			<h2>IV. Story</h2>
+			<p>N/A (Abstract).</p>
+		</section>
+		
+		<section>
+			<h2>V. Esthetics</h2>
+			<p>Graphics style: Abstract</p>
+			<p>Sound: 8-bit</p>
+			<p>Sound types: Scoring, shooting, rotating block</p>
+		</section>
+		
+		<section>
+			<h2>VI. Gameplay</h2>
+			<h3>Mechanics</h3>
+			<p>The player can shoot to break a block, rotate a block, and can move a block & blaster (at the same time)</p>		
+			
+			<h3>Control</h3>
+			<p>Keyboard controls with WASD, SPACE, and QE</p>
+			
+			<h3>Teaching the game/New user experience aka "Onboarding"</h3>
+			<p>There will be controls in a controls menu page that will explain the controls.</p>
+		
+			<h3>Player learning</h3>
+			<p>There isnt a "beating the game" but to do well, the player should be able to think on their feat, and build up combos to gain big scores. Most skills are transferable from tetris.</p>
+			
+		</section>
+		
+		
+		<section>
+			<h2>VII. Screenshots</h2>
+			<p><img src="media/235-Final-example.png" alt="" width="100%"></p>
+		</section>
+		
+		<section>
+			<h2>VIII. Documentation</h2>
+			
+    		<p>For the process of this project, I started off by focusing a lot on the systems. I reused/was inspired by some of the features from circle blast. This is most clearly seen with the ship, which pretty similar to the circle blast ship. It has some modifications to it such as shooting being a method of it, and it only being able to move in the X direction, but otherwise is similar. The reason I did this was because it was similar to what I wanted to do, and its such a small class that the modifications make it decently different already. The bullets are also similar, but I removed the stuff that wasn't needed. To compensate for reusing those parts, I have three large new classes. The first is the tile which is each individual cube. They are just rectangles but I added features to change colors to them, for utility and for possible design features for the future. The main class used is the block class, which contains nine tiles. Block needs to store and manipulate the tiles, and so it has a fair few methods, such as redrawing the blocks (moving their position), rotating itself, getting the lowest tile on it, and more. On the note of rotating itself, my first way of doing it was with for loops, but I ended up using map instead. I got the idea from the first link in the sources list below. Block stack is the final new class, and it keeps track of all the scoring and collision. It has a grid of tiles and is able to check for a line being formed, and give out points. Initially, I wanted the array it stored to be just 0 or 1, but i realized that I couldn't clear the screen properly like that. That is why it is a 2d array of tiles. I decided to cut the game over screen and instead just display a high score screen on the menu to reduce time needed and also because I think it looks cool displaying the score when first booted up. For the score, I use local storage to store it so it should always be the highest you have. Honestly im pretty happy with how it turned out, with the only thing I regret is not giving myself more time to work on it. My math final ate up way more time than I though/it should have leaving way less time for this than intended.</p>
+
+			<ul>
+				<li><a href="https://opengameart.org/content/spaceship-1">Spaceship asset</a></li>
+				<li><a href="https://stackoverflow.com/questions/17428587/transposing-a-2d-array-in-javascript">Map rotation idea</a></li>
+				<li><a href="https://dev.to/rajnishkatharotiya/function-to-check-if-all-records-are-equal-in-array-javascript-3mo3#:~:text=Javascript%20Useful%20Snippets%20%E2%80%94%20allEqual(),allEqual%20%3D%20arr%20%3D%3E%20arr.">Where I learned about array.every()</a></li>
+				<li><a href="https://stackoverflow.com/questions/15052702/count-unique-elements-in-array-without-sorting">Post where I learned about sets</a></li>
+			</ul>
+		</section>
+		
+		<section>
+			<h2>IX. About the developer(s)</h2>
+			<p>Thomas Berrios, 2nd year GDD major, SWEN minor. I enjoy playing and making games/interactive software. Programming in general is really fun for me. Not a design person but ill do it when needed.</p>
+		</section>
+	</div>
+</body>
+</html>
